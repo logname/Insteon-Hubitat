@@ -221,5 +221,6 @@ How to control groups from Hubitat
 You can control Insteon groups from a Hubitat Elevation hub without installing any drivers or software by sending an HTTP command using GET with Hubitat Rule Machine or Button Controller.
 
 <img width="706" alt="Screen Shot 2022-04-17 at 4 29 15 PM" src="https://user-images.githubusercontent.com/9291086/164883768-7b653bf5-4248-4f80-8109-b164de869d22.png">
+
 **Example:**
 >Send GET to: http://Annie:ytyYUbva@192.168.0.146:25105/0?1110=I=0
