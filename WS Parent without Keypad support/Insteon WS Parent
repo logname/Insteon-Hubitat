@@ -89,6 +89,8 @@ if (msg.id != null){
 	child = getChildDevice(msg.id)
        // log.debug "Got event for Device ${child} with a value of ${msg.state}"
 if (msg.deviceType == "contactsensor") {childContact(child, msg.state)}
+if (msg.deviceType == "doorsensor") {childContact(child, msg.state)}
+if (msg.deviceType == "windowsensor") {childContact(child, msg.state)}
 if (msg.deviceType == "dimmer") {childDimmer(child, msg.state)}
 if (msg.deviceType == "lightbulb") {childDimmer(child, msg.state)}
 if (msg.deviceType == "leaksensor") {childLeakSensor(child, msg.state)}
@@ -173,6 +175,8 @@ def createDevices(msg){ msg.each { it->
     namespace = "cw"
     if (it.deviceType == "motionsensor") {type = "Insteon Motion Child"}
 	if (it.deviceType == "contactsensor") {type = "Insteon Contact Child"}
+	if (it.deviceType == "doorsensor") {type = "Insteon Contact Child"}
+	if (it.deviceType == "windowsensor") {type = "Insteon Contact Child"}
     if (it.deviceType == "dimmer") {type = "Insteon Dimmer Child"}
     if (it.deviceType == "leaksensor") {type = "Insteon Leak Child"}
     if (it.deviceType == "lightbulb") {type = "Insteon Dimmer Child"}
