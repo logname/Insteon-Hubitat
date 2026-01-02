@@ -139,7 +139,10 @@ def createChild (id, type ) {
 	namespace = "cw"
 	if (type == "motion") {type = "Insteon Motion Child"}
 	if (type == "contact") {type = "Insteon Contact Child"}
+	if (type == "door") {type = "Insteon Contact Child"}
+	if (type == "window") {type = "Insteon Contact Child"}
     if (type == "dimmer") {type = "Insteon Dimmer Child"}
+    if (type == "lightbulb") {type = "Insteon Dimmer Child"}
     if (type == "leaksensor") {type = "Insteon Leak Child"}
 	addChildDevice (namespace, type, id, [label: type + "|" + id, isComponent: false, name: type])
 }
