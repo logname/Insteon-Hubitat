@@ -21,11 +21,21 @@
 metadata {
 	definition (name: "Insteon Contact Child", namespace: "cw", author: "cwwilson08") {
 		
-		capability "Contact Sensor"
+		capability "ContactSensor"
+        command "open"
+        command "close"
         			
 	}   
 }
 
 
 def installed() {
+}
+
+def open() {
+    sendEvent(name: "contact", value: "open")
+}
+
+def closed() {
+    sendEvent(name: "contact", value: "closed")
 }
