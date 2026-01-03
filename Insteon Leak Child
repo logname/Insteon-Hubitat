@@ -21,11 +21,21 @@
 metadata {
 	definition (name: "Insteon Leak Child", namespace: "cw", author: "cwwilson08") {
 		
-		capability "Water Sensor"
+		capability "WaterSensor"
+        command "wet"
+        command "dry"
         			
 	}   
 }
 
 
 def installed() {
+}
+
+def dry() {
+    sendEvent(name: "water", value: "dry")
+}
+
+def wet() {
+    sendEvent(name: "water", value: "wet")
 }
